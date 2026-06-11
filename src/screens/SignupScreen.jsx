@@ -3,13 +3,14 @@ import Input from '../components/Input';
 import RadioGroup from '../components/RadioGroup';
 
 const SignupScreen = ({ onNavigate, onSignup }) => {
+  // Initializing with empty fields as requested, with no pre-filled user details
   const [formData, setFormData] = useState({
-    fullName: 'Marry Doe',
-    phone: 'Marry Doe',
-    email: 'Marry@Gmail.Com',
-    password: 'Marry Doe',
-    companyName: 'Marry Doe',
-    isAgency: 'yes'
+    fullName: '',
+    phone: '',
+    email: '',
+    password: '',
+    companyName: '',
+    isAgency: ''
   });
 
   const handleChange = (e) => {
@@ -53,6 +54,7 @@ const SignupScreen = ({ onNavigate, onSignup }) => {
           name="fullName"
           value={formData.fullName}
           onChange={handleChange}
+          placeholder="Enter full name"
           required
         />
 
@@ -61,6 +63,7 @@ const SignupScreen = ({ onNavigate, onSignup }) => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
+          placeholder="Enter phone number"
           required
         />
 
@@ -70,6 +73,7 @@ const SignupScreen = ({ onNavigate, onSignup }) => {
           name="email"
           value={formData.email}
           onChange={handleChange}
+          placeholder="Enter email address"
           required
         />
 
@@ -79,6 +83,7 @@ const SignupScreen = ({ onNavigate, onSignup }) => {
           name="password"
           value={formData.password}
           onChange={handleChange}
+          placeholder="Enter password"
           required
         />
 
@@ -87,6 +92,7 @@ const SignupScreen = ({ onNavigate, onSignup }) => {
           name="companyName"
           value={formData.companyName}
           onChange={handleChange}
+          placeholder="Enter company name"
         />
 
         <RadioGroup
